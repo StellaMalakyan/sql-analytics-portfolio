@@ -20,7 +20,7 @@ services:
       - ./init:/docker-entrypoint-initdb.d
       - ./data:/docker-entrypoint-initdb.d/data:ro
       - ./data/analytics_schema:/data:ro
-
+      - ./data/job_analytics:/salary_data:ro
   pgadmin:
     container_name: pgadmin_aca
     image: dpage/pgadmin4
