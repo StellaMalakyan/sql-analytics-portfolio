@@ -6,3 +6,7 @@ CREATE TABLE job_analytics.country (
     geom GEOMETRY(MULTIPOLYGON, 4326)
 );
 
+-- 4th step
+INSERT INTO job_analytics.country (country_name, country_code, geom)
+SELECT country_name, country_code, geom
+FROM job_analytics._stg_world_countries;
