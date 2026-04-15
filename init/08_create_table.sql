@@ -1,5 +1,5 @@
 \c salary_prediction;
-
+CREATE SCHEMA IF NOT EXISTS job_analytics;
 DROP TABLE IF EXISTS job_analytics._stg_salary_prediction;
 
 CREATE TABLE job_analytics._stg_salary_prediction (

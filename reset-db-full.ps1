@@ -10,4 +10,4 @@ docker compose up --build
 Write-Host "Database reset complete. Init scripts reran successfully."
 Collapse
 
-# powershell -ExecutionPolicy Bypass -File reset-db.ps1
+# powershell -ExecutionPolicy Bypass -File reset-db-full.ps1

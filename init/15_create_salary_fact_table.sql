@@ -1,3 +1,4 @@
+\c salary_prediction;
 CREATE TABLE job_analytics.salary_fact (
     fact_id SERIAL PRIMARY KEY,
     job_title_id INT REFERENCES job_analytics.job_title(job_title_id),

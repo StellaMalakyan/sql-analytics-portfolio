@@ -1,3 +1,5 @@
+\c salary_prediction;
+CREATE SCHEMA IF NOT EXISTS job_analytics;
 CREATE TABLE job_analytics.job_title (
     job_title_id SERIAL PRIMARY KEY,
     job_title_name VARCHAR(100) UNIQUE NOT NULL

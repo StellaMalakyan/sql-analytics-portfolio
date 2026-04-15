@@ -1,8 +1,9 @@
-DROP TABLE IF EXISTS job_analyticcity CASCADE;
-CREATE TABLE job_analyticcity (
+\c salary_prediction;
+DROP TABLE IF EXISTS job_analytics.city CASCADE;
+CREATE TABLE job_analytics.city (
     city_id SERIAL PRIMARY KEY,
     city_name VARCHAR(100) NOT NULL,
-    country_id INT REFERENCES job_analyticcountry(country_id),
+    country_id INT REFERENCES job_analytics.country(country_id),
     UNIQUE (city_name, country_id)
 );
 

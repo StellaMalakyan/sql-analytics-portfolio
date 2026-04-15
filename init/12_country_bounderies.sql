@@ -1,3 +1,4 @@
+\c salary_prediction;
 DROP TABLE IF EXISTS job_analytics._stg_world_countries CASCADE;
 CREATE TABLE job_analytics._stg_world_countries (
     country_name TEXT NOT NULL,
@@ -25,3 +26,9 @@ FROM (
         SELECT pg_read_file('/docker-entrypoint-initdb.d/data/job_analytics/countries.geo.json')::jsonb AS data
     ) f
 ) sub;
+
+
+-- 4th step
+INSERT INTO job_analytics.country (country_name, country_code, geom)
+SELECT country_name, country_code, geom
+FROM job_analytics._stg_world_countries;
